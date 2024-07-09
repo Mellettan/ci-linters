@@ -87,7 +87,7 @@ jobs:
         pip install isort
 
     - name: Run isort
-      run: isort --check-only --diff src/
+      run: isort --check-only --diff --profile black src/
 
   flake8:
     runs-on: ubuntu-latest
