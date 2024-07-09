@@ -51,6 +51,7 @@ async def get_recipes() -> List[models.Recipe]:
     Receiving all recipes in sorted form (by number of views and cooking time)
     """
     res = await session.execute(
-        select(models.Recipe).order_by(desc(models.Recipe.views), asc(models.Recipe.cooking_time))
+        select(models.Recipe).order_by(desc(models.Recipe.views),
+                                       asc(models.Recipe.cooking_time))
     )
     return res.scalars().all()
