@@ -5,6 +5,7 @@ class BaseRecipe(BaseModel):
     """
     Base recipe model
     """
+
     name: str
     cooking_time: int
 
@@ -13,6 +14,7 @@ class GeneralReviewRecipes(BaseRecipe):
     """
     Represents a recipe in a general table with a list of all recipes
     """
+
     views: int
 
     class Config:
@@ -36,5 +38,6 @@ class RecipeIn(BaseRecipe):
     """
     Scheme for creating a recipe
     """
+
     ingredients: str
     description: str
