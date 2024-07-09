@@ -1,11 +1,11 @@
 from typing import List
 
-from fastapi import FastAPI, Path
+from fastapi import FastAPI
 from sqlalchemy import select, desc, asc
 
-from database import engine, session
-import models
-import schemas
+from .database import engine, session
+from . import models
+from . import schemas
 
 app = FastAPI()
 
